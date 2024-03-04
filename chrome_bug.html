@@ -1,0 +1,97 @@
+<html>
+
+<head>
+  <style>
+    #treeFixedParent {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+    }
+
+    #treeFixedParent {
+/* 
+      width: 950px;
+      height: 450px; */
+
+      /* width: 100%;
+          height: 100%; */
+      padding: 13px;
+      margin: 0px;
+      position: fixed;
+      /* left: 50px;
+      top: 51px; */
+      border: 1px solid red;
+    }
+
+    #treeFloatParent {
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      position: absolute;
+      left: 50%;
+      top: 5%;
+      transform: translate(-50%, 0);
+      z-index: 60000;
+    }
+
+    #hex_decomp_cont {
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="treeFixedParent">
+    <div id="flowProxyNeib" class="hexIn" style="z-index: 59995 !important;">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"
+          style="width: 100%; height: 100%;">
+          <defs>
+            <mask id="mp896601" x="0" y="0" width="1" height="1">
+              <path
+                d="M238 225c-36-1-71 1-104 4-1 8-3 12-5 13-2 0-4-2-6-8-2-5-3-10-3-15 0-4 1-11 2-22s2-32 3-64-1-51-4-57c-4-6-2-8 5-6 7 1 22 0 45-3 22-3 37-5 44-8 7-2 12-3 15-3 4 0 8 2 12 5 5 3 10 5 14 8s4 7 0 12c-4 6-6 19-4 39 2 21 4 43 6 67 3 23 3 39 1 47-2 9-4 15-7 19-3 5-6 2-10-7-3-10-4-17-4-21z"
+                stroke="#fff" fill="#fff"></path>
+              <path
+                d="M183 73c8 5 11 9 10 12s-2 10-5 21c14-3 23-4 25-1 3 2 4 4 2 7-3 2-12 5-28 9-1 9-1 17-2 25 4-1 8-2 10-4 3-2 7-2 12 0 5 3 9 5 12 8s2 5-2 8-7 9-9 18c3 2 4 4 4 6s-5 3-15 3c-11 1-20 2-28 3-4 7-7 8-9 4-1-4-3-11-5-20-1-8-3-15-4-19-2-4-1-6 2-5 3 0 6 0 7 1 2 0 6 0 13-1 1-11 1-19 1-26-10 1-18 0-23-2-6-2-6-4 0-6 5-1 13-3 23-5 1-14-1-25-4-34-6 0-17 1-33 4 0 47-1 94-2 140 30-3 52-5 65-7s26-1 40 3c0-23 0-50-2-83-2-32-4-51-8-56s-9-7-15-7c-7 0-18 2-32 4z"
+                stroke="#fff" fill="#000"></path>
+              <path d="M168 156c0 9 0 17 1 24 6-1 14-2 24-3 2-11 3-18 2-21 0-3-3-4-8-3-6 0-12 2-19 3z" stroke="#fff"
+                fill="#000"></path>
+              <path
+                d="M79 109c9 6 13 12 12 16-1 5-2 15-3 31v58c1 23 0 37-3 44s-5 9-8 6c-3-4-5-8-6-15-1-6-1-13 1-21s3-28 4-60 0-49-5-50c-13 17-25 30-35 37-11 8-16 11-14 8 1-2 4-7 10-13s14-17 24-33 19-31 25-46c7-16 9-26 8-33-2-6 0-8 4-7 5 2 9 5 15 10 5 4 7 8 4 12s-8 12-16 25c-7 13-13 23-17 31z"
+                stroke="#fff" fill="#fff"></path>
+            </mask>
+          </defs>
+          <g mask="url(#mp896601)">
+            <rect height="100%" width="100%" fill=""
+              style="transition: fill 2s ease 0s, stroke 2s ease 0s; fill: black; stroke: black;"></rect>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div id="treeFloatParent">
+      <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"
+       id="hex_decomp_svg" style="width: 100%; height: 100%; position: absolute; border: 2px solid lightgreen">
+        <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(17, 237, 32);stroke-width:2" />
+      </svg>
+      <!-- <div id="treeHTMLParent"></div> -->
+
+    </div>
+  </div>
+
+</body>
+
+<script>
+  let el = document.getElementById('treeFixedParent')
+  setInterval(() => {
+    let t3000 = Date.now() % 3000
+    el.style.padding = 133 * Math.sin(t3000 / 3000) + 133
+  }, 100)
+</script>
+
+</html>
